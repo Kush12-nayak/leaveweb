@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto Slab', serif;
+}
+
+.nav{
+
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    /* background:linear-gradient(135deg,#e4f0fc,#aed2df); */
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+body{
+    background:linear-gradient(135deg,#adcff0,#7ab1c4);
+}
+
+.submit{
+    position: relative;
+    top: 1rem;
+    margin: auto;
+    padding: 0.5rem;
+    border: 1px solid blue;
+    color: whitesmoke;
+    background-color:rgba(0, 0, 0, 0.794);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+}
+
+.submit:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.nav .left{
+    width: 10%;
+}
+
+.nav .left img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+   display: flex;
+   justify-content: center;
+   padding: 0.3rem;
+}
+
+.nav .mid{
+    width: 70%;
+}
+
+.nav .right{
+    width: 20%;
+}
+
+.nav .mid h2{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9rem;
+    color: rgb(9, 135, 231);
+}
+
+.nav .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .right a{
+    text-decoration: none;
+    padding: 0.6rem;
+    border: none;
+    color: white;
+    background-color:rgb(9, 135, 231);
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+.nav .right a:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.821);
+}
+
+.container{
+    min-height: 100vh;
+    max-width: 100vw;
+   margin: auto;
+   padding: 2rem;
+    
+}
+
+form{
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+   
+}
+
+.topcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.topcon .inputs{
+    width: 33%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    
+}
+
+.topcon .inputs span{
+    padding: 0.3rem;
+
+}
+
+.topcon input{
+    width: 60%;
+}
+
+.topcon .inputs .dropdown{
+    width: 60%;
+}
+
+.leavedetails{
+    display: block;
+    margin: 0.8rem;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    color:black;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+    width: fit-content; 
+    background-color: whitesmoke;
+}
+
+.lastcon{
+    border: 1.5px solid rgb(83, 102, 249);
+    border-radius: 10px;
+    background-color: white;
+    
+}
+
+.lastcon .inputs{
+    margin: 0.3rem;
+    padding: 0.3rem;
+}
+
+.datecon{
+    display: flex;
+}
+
+.datecon .inputs span{
+    margin-left: 1rem;
+}
+
+.lastcon p{
+    margin: 1rem;
+}
+
+form input{
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(161, 158, 158, 0.244);
+    padding: 0.5rem;
+}
+
+form input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+form .inputs span{
+    
+    margin: 0.3rem;
+}
+
+.inputs .border{
+    border: 1px solid rgb(101, 150, 247);
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+.dropdown{
+    border: 1px solid rgb(101, 150, 247);
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+#time{
+    margin: 0.2rem;
+    padding: 0.3rem;
+    
+}
+
+#time{
+    display: none;
+   
+}
+
+
+#time div{
+    margin: 0.3rem;
+}
+
+
+
+@media only screen and (max-width:600px){
+    
+    .nav .mid h2{
+        position: relative;
+        top: 15%;
+        padding: 0.2rem;
+        font-size: 1.5rem;
+    }
+
+    .nav .right a{
+        text-decoration: none;
+        padding: 0.5rem;
+        border: none;
+        color: white;
+        background-color:rgb(9, 135, 231);
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+
+
+    .container{
+        padding: 0.5rem;
+        margin: 1rem;
+        max-height: fit-content;
+        
+    }
+
+    form{
+        display: block;
+    }
+
+    .topcon{
+        display: block;
+        max-width:100% ;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .topcon .inputs{
+        width: 90vw;
+    }
+
+    .topcon .inputs span{
+        padding: 0.2rem;
+    }
+
+    .topcon input{
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    .lastcon .datecon{
+        display: block;
+        
+    }
+
+    .lastcon .datecon input{
+        margin: 0.5rem;
+        display: block;
+        width: 80%;
+    }
+
+    .lastcon .inputs textarea{
+       overflow-y: hidden;
+       
+    }
+
+    .submit{
+        display: block;
+        margin: auto;
+        
+    }
+
+    #timecon{
+        display: block;
+       
+    }
+
+}

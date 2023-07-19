@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="nav">
+        <div class="left">
+            <img src="companylogo.png" alt="">
+        </div>
+        <div class="mid">
+            <h2>Sypram Technology</h2>
+        </div>
+        <div class="right">
+            <a href="">Login</a>
+        </div>
+    </header>
+        <div class="container">
+            <form action="" id="form">
+                <div class="topcon">
+                    <div class="inputs">
+                        <span>Employee Name:</span>
+                        <input type="text" name="empname" minlength="2"  required id="empname" onchange="checkname()">
+                    </div>
+                    <div class="inputs">
+                        <span>Employee Code:</span>
+                        <input type="number" name="empcode" required id="empcode" onchange="checkcode()" onclick="checkname()">
+                    </div>
+                    <div class="inputs">
+                        <span>Department:</span>
+                        <select name="dep" id="department" class="dropdown" class="border" onclick="checkboth()" required>
+                            <option value=""></option>
+                            <option value="Development">Development</option>
+                            <option value="Customer-Support">Customer-Support</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="leavedetails">Leave Details:</div>
+                <div class="lastcon">
+                    <div class="datecon">
+                        <div class="inputs">
+                            <span >Number of days</span>
+                            <span id="error" style="font-size: 0.8rem;"></span>
+                            <input id="numberofdays" required type="number" step="0.5" min="0.5" onchange="disabledate()" onclick="checkDep()" onKeyPress="if(this.value.length==3) return false">
+                        </div>
+                        <div class="inputs">
+                            <span>From(date):</span>
+                            <input class="border" type="date"  id="fromdate" onchange="getfromdate()" onclick="validateDays()">
+                            <span>To(date):</span>
+                            <input class="border" type="date" id="todate" >
+                        </div>
+                    </div>
+                    <p>Tick appropriate leave option</p>
+                    <div class="inputs">
+                        <input type="radio" name="leave" value="compoff" onclick="hidediv()">
+                        <span>Comp off</span>
+                    </div>
+                    <div class="inputs">
+                        <input type="radio" name="leave" value="casualleave" onclick="hidediv()">
+                        <span>Casual Leave</span>
+                    </div > 
+                    <div class="inputs">
+                        <input type="radio" name="leave" value="privilegedleave" onclick="hidediv()">
+                        <span>Privileged leave</span>
+                    </div>
+                    <div class="inputs">
+                        <input type="radio" name="leave" value="sickleave" onclick="hidediv()">
+                        <span>Sick Leave</span>
+                    </div>
+                    <div class="inputs">
+                        <input type="radio" name="leave" value="shortleave" id="shleave" onclick="timefun()">
+                        <span >Short Leave</span>
+                        <div id="time">
+                           
+                                <div>select start time:</div>
+                                <input  type="time" id="starttime">
+                                <div>select end time:</div>
+                                <input type="time" id="endtime"  onclick="validatestarttime()" onchange="validatendtime()">
+                            
+                        </div>   
+                    </div>
+                    <div class="inputs">
+                        <input type="radio" name="leave" value="lwp" onclick="hidediv()">
+                        <span>Leave Without Pay(LWP)</span>
+                    </div>
+                    <div class="inputs">
+                        <p>Reason for leave:</p>
+                        <textarea onclick="checkradio();checktime()" name="" id="message" cols="35" rows="5" required></textarea>
+                    </div>
+                </div>  
+                <input type="submit" class="submit" >   
+            </form>
+        </div>
+        <script src="index.js"></script>
+</body>
+</html>
